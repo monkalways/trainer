@@ -4,17 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { WorkoutRunnerComponent } from './workout-runner/workout-runner.component';
+import { WorkoutService } from './shared/workout.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WorkoutRunnerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ 
+    WorkoutService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
