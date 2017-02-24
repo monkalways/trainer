@@ -1,5 +1,11 @@
 <div class="row">
-  <div id="exercise-pane" class="col-sm-8 offset-sm-2">
+  <div class="col-sm-2">
+    <exercise-description 
+      [description]="currentExercisePlan.exercise.description"
+      [steps]="currentExercisePlan.exercise.procedure">
+    </exercise-description>
+  </div>
+  <div id="exercise-pane" class="col-sm-7">
     <div class="row workout-content">
       <div class="workout-display-div">
         <h1>{{currentExercisePlan.exercise.title}}</h1>
@@ -13,5 +19,8 @@
         <h1>Time Remaining: {{currentExercisePlan.duration-exerciseRunningDuration}}</h1>
       </div>
     </div>
+  </div>
+  <div id="video-panel" class="col-sm-3">
+    <video-player [videos]="currentExercisePlan.exercise.videos"></video-player>
   </div>
 </div>
